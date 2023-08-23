@@ -10,21 +10,13 @@ public class test extends JPanel{
         JFrame frame = new JFrame();
 
         frame.setLayout(new GridLayout());
-        List_node list_node = new List_node(2);
+        List_node list_node = new List_node(2, 50, new Position(200,200));
         frame.setTitle("Visualizermenu");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 500);
         frame.setResizable(false);
-        test Test = new test();
-        test eest = new test();
-        test ceest = new test();
-        frame.add(ceest);
-        frame.add(Test);
-        frame.add(eest);
-        test feest = new test();
-        frame.add(feest);
-        test keest = new test();
-        frame.add(keest);
+
+        frame.add(list_node);
         frame.setVisible(true);
 
     }

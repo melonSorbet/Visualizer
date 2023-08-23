@@ -16,7 +16,7 @@ public class arrays_visualizer{
         done_array = array;
     }
     public void create_buttons(){
-
+        //wird geändert das es Panels macht
         node_array = new Node[array.length];
         frame.setLayout(new GridLayout());
         for(int i = 0; i < array.length; i++){
