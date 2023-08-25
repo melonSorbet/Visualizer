@@ -1,16 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class array_node extends Node{
+public class Array_Node extends Node{
 
     JButton button;
-    public array_node(int number) {
+    public Array_Node(int number) {
         super(number);
         button = new JButton();
         button.setText(Integer.toString(number));
     }
 
-    public void switch_buttons(array_node other_node) {
+    public void switch_buttons(Array_Node other_node) {
         String string = other_node.button.getText();
         other_node.button.setText(button.getText());
         button.setText(string);

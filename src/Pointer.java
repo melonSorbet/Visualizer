@@ -1,10 +1,10 @@
 import java.awt.*;
 
-public class pointer {
-    //pointer points from one circle to the next one
+public class Pointer {
+    //Pointer points from one circle to the next one
     Position start_point;
     Position end_point;
-    public pointer(Position start, Position end){
+    public Pointer(Position start, Position end){
         start_point = start;
         end_point = end;
     }

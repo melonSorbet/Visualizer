@@ -6,6 +6,10 @@ public class Position {
         this.x = x;
         this.y = y;
     }
+    public Position(Position position){
+        this.x = position.x;
+        this.y = position.y;
+    }
 
     public float getX() {
         return x;

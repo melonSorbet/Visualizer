@@ -1,16 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
-import java.io.*;
 import java.lang.Thread;
-public class arrays_visualizer{
+public class Array_Visualizer {
     Node[] node_array;
     int[] array;
 
     int[] done_array;
 
     JFrame frame;
-    public arrays_visualizer(int[] array, JFrame frame){
+    public Array_Visualizer(int[] array, JFrame frame){
         this.frame = frame;
         this.array = array;
         done_array = array;
@@ -20,7 +19,7 @@ public class arrays_visualizer{
         node_array = new Node[array.length];
         frame.setLayout(new GridLayout());
         for(int i = 0; i < array.length; i++){
-            array_node node = new array_node(array[i]);
+            Array_Node node = new Array_Node(array[i]);
             node.button.setText(node.button.getText());
             node_array[i] = node;
             frame.add(node.button);

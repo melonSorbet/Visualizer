@@ -1,32 +1,23 @@
 import javax.swing.*;
-import java.awt.*;
-import java.util.Arrays;
-import java.util.LinkedList;
 
 public class Frame {
     JFrame frame;
-    arrays_visualizer array_vis;
-    public Frame(int[] array){
-
+    public Frame(){
         frame = new JFrame();
-        array_vis = new arrays_visualizer(array, frame);
-        array_vis.create_buttons();
-
-
         frame.setTitle("Visualizermenu");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
         frame.setSize(500, 500);
+    }
+    public void set_visible(){
+        frame.setVisible(true);
+    }
+    public void set_size(int widght, int height){
+        frame.setSize(widght, height);
+    }
+    public void add_component(List_Node new_node){
 
-
+        frame.add(new_node);
     }
 
-
-
-    public static void main(String[] args){
-        Frame frame = new Frame(new int[]{123,1,221,4,54,51,23,12});
-
-        frame.frame.setVisible(true);
-        frame.array_vis.visualizer();
-
-    }
 }
