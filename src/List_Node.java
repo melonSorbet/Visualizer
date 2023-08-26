@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class List_Node extends JPanel{
+public class List_Node extends Node{
     JPanel panel;
     int number;
     List_Node pre;
@@ -9,19 +9,24 @@ public class List_Node extends JPanel{
     Position position;
     int radius;
     public List_Node(int number, int radius, Position position) {
-
+        super(number);
 
         this.radius = radius;
         this.position = position;
 
-        //position ist gerade nur obere rechte ecke
-        this.setBounds((position.x) - (radius / 2), (position.y - 25) - (radius / 2),radius,radius);
-        JLabel label = new JLabel(Integer.toString(number), JLabel.CENTER);
+        this.setBounds((position.x) - (radius / 2), (position.y - 25) - (radius / 2),radius +1,radius +1);
 
+        //position ist gerade nur obere rechte ecke
+
+        JLabel label = new JLabel(Integer.toString(number));
+        this.setLayout(new BorderLayout());
+        label.setVerticalAlignment(JLabel.CENTER);
+        label.setHorizontalAlignment(JLabel.CENTER);
+        label.setSize(100,100);
 
         this.add(label);
-    }
 
+    }
 
     public void set_color(Color color) {
 
@@ -34,16 +39,27 @@ public class List_Node extends JPanel{
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.setColor(Color.red);
-        g.drawOval((position.x) - (radius / 2), (position.y - 25) - (radius / 2),radius,radius);
+        //g.drawOval((position.x) - (radius / 2), (position.y - 25) - (radius / 2),radius,radius);
+
+        g.drawOval(0,0,radius, radius);
+
 
     }
 
     public static void main(String[] arg){
-        Frame frame = new Frame();
-        List_Node node = new List_Node(2, 50, new Position(250, 250));
+        Frame frame = new Frame(700, 700);
 
+        List_Node node = new List_Node(1, 100, new Position(50, 350));
+        Pointer pointer = new Pointer(new Position(50,200), new Position(250,350));
         frame.frame.add(node);
+        frame.frame.add(pointer);
+        List_Node node2 = new List_Node(2, 100, new Position(250, 350));
+
+
+
+        frame.frame.add(node2);
+
+
 
         frame.set_visible();
 
