@@ -27,6 +27,7 @@ public class Array_Visualizer {
         node_array[0].set_color(Color.GREEN);
     }
 
+    //example Algorithm
     public void visualizer(){
 
         int n = array.length;

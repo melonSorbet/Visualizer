@@ -1,17 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class Pointer extends JLabel {
     //Pointer points from one circle to the next one
-    Position start_point;
-    Position end_point;
-    public Pointer(Position start, Position end){
-        start_point = start;
-        end_point = end;
-
+    List_Node start_node;
+    List_Node end_node;
+    public Pointer(List_Node start, List_Node end){
+        start_node = start;
+        end_node = end;
+        this.setBounds(0,0, 1080,720);
     }
-    public void paint(Graphics g){
-        g.drawLine(start_point.x, start_point.y, end_point.x, end_point.y);
+
+    @Override
+    protected void paintComponent(Graphics g){
+        super.paintComponent(g);
+        g.drawLine(start_node.position.x - start_node.radius, start_node.position.y - start_node.radius, end_node.position.x - start_node.radius, end_node.position.y - start_node.radius);
     }
 
 

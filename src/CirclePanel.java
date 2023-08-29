@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class CirclePanel extends JPanel {
-    private JLabel numberLabel;
-    private Dimension preferredSize;
+    private final JLabel numberLabel;
+    private final Dimension preferredSize;
 
     public CirclePanel(int number, int width, int height) {
         setLayout(new GridBagLayout()); // This layout will center the JLabel in the panel

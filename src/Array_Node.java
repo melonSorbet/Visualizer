@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Array_Node extends Node{
-
+    //alles wird hier umgeändert weil buttons unpraktisch sind
     JButton button;
     public Array_Node(int number) {
         super(number);
