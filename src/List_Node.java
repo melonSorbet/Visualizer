@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class List_Node extends Node {
 
@@ -8,6 +9,7 @@ public class List_Node extends Node {
     List_Node post;
     public Position position;
     int radius;
+    Pointer[] pointers;
 
     public List_Node(int number, int radius, Position position) {
         super(number);
@@ -32,12 +34,12 @@ public class List_Node extends Node {
 
     @Override
     public void set_color(Color color) {
-
+        this.setBackground(color);
     }
 
     @Override
     public void set_number(int number) {
-
+        
     }
 
     @Override
